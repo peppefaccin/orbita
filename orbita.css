@@ -1,0 +1,42 @@
+/* Órbita: o que muda em relação ao estilo base */
+
+.marca img { height: 36px; width: 36px; }
+.marca .nome { font-size: 12px; font-weight: 600; letter-spacing: 6px; }
+
+/* ---------- tela de entrada ---------- */
+body.entrando .topo, body.entrando .abas-baixo { display: none; }
+body.entrando { padding-bottom: 0; }
+.entrada-tela {
+  min-height: 100vh; display: grid; place-items: center;
+  padding: calc(32px + env(safe-area-inset-top)) 20px calc(32px + env(safe-area-inset-bottom));
+}
+.entrada-caixa { width: min(420px, 100%); display: flex; flex-direction: column; gap: 20px; }
+.simbolo-grande { width: 150px; height: 150px; margin: 0 auto 4px; display: block; animation: girar 120s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .simbolo-grande { animation: none; } }
+.titulo-marca { text-align: center; font-size: 24px; font-weight: 600; letter-spacing: 12px; margin: 0 0 0 12px; }
+.sub-marca { text-align: center; color: var(--apagado); font-size: 14px; margin: 0 0 8px; }
+.caixinha { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.75); cursor: pointer; }
+.caixinha input {
+  appearance: none; -webkit-appearance: none; width: 20px; height: 20px; margin: 0; flex: none;
+  border: 1px solid rgba(255,255,255,.6); border-radius: 5px; display: grid; place-items: center; cursor: pointer;
+}
+.caixinha input:checked { background: var(--tinta); border-color: var(--tinta); }
+.caixinha input:checked::after {
+  content: ''; width: 9px; height: 5px; border-left: 2px solid #000; border-bottom: 2px solid #000;
+  transform: translateY(-1px) rotate(-45deg);
+}
+.botao.largo { justify-content: center; padding: 14px; font-size: 11.5px; width: 100%; }
+.credito { text-align: center; font-size: 11px; color: var(--apagado); letter-spacing: .5px; }
+.credito a { color: inherit; }
+.aviso-teste { font-size: 11px; color: var(--fraco); text-align: center; margin: 0; }
+.erro-campo { font-size: 12px; color: var(--gravando); margin: -10px 0 0; min-height: 0; }
+
+/* ---------- ajustes ---------- */
+.chip .tirar { margin-left: 8px; opacity: .55; }
+.lista-edit { display: flex; flex-direction: column; }
+.item-edit { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--linha); font-size: 14px; }
+.item-edit span { flex: 1; min-width: 0; }
+.add-linha { display: flex; gap: 12px; align-items: flex-end; }
+.add-linha .campo { flex: 1; }
+.rodape-credito { padding: 8px 0 0; }
