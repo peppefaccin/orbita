@@ -259,7 +259,7 @@
         <div class="chips">${Object.entries(NICHOS).map(([id, n]) => `<button class="chip ${e.nicho === id ? 'ativo' : ''}" data-acao="e-nicho" data-valor="${id}">${n.nome}</button>`).join('')}</div>
       </div>
       <label class="caixinha"><input type="checkbox" id="e-novidades" ${e.novidades ? 'checked' : ''}>
-        <span>Quero receber e-mails do Peppe Faccin com novidades do Órbita, conteúdos e produtos, como packs de LUT. Dá para sair quando quiser.</span></label>
+        <span>Quero receber e-mails do Peppe Faccin com novidades do Órbita, conteúdos e produtos. Dá para sair quando quiser.</span></label>
       ${e.erro ? `<p class="erro-campo">${esc(e.erro)}</p>` : ''}
       <button class="botao cheio largo" data-acao="entrar">ENTRAR</button>
       ${MODO_TESTE ? '<p class="aviso-teste">Versão de teste: seus dados ficam só neste aparelho.</p>' : ''}

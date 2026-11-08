@@ -1,5 +1,5 @@
 // Guarda o Órbita para abrir sem internet. Sempre tenta a versão nova primeiro.
-const CACHE = 'orbita-v1';
+const CACHE = 'orbita-v2';
 const ARQUIVOS = ['./', 'index.html', 'estilo.css', 'orbita.css', 'config.js', 'app.js', 'simbolo.png', 'simbolo-96.png', 'icone-192.png', 'manifest.webmanifest'];
 
 self.addEventListener('install', (e) => {
